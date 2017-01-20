@@ -1,7 +1,7 @@
 import React from 'react';
 import Moment from 'moment';
 import {extendMoment} from 'moment-range';
-import DateRangePicker from 'react-daterange-picker';
+import DateRangePicker from '../lib/react-daterange-picker';
 
 const moment = extendMoment(Moment);
 
@@ -27,7 +27,7 @@ const DatePicker = ({value, dates, onDateClick}) => {
       firstOfWeek={1}
       numberOfCalendars={2}
       selectionType="range"
-      minimumDate={moment()}
+      minimumDate={new Date()}
       stateDefinitions={stateDefinitions}
       dateStates={dates}
       defaultState="defaultState"
