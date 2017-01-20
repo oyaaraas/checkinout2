@@ -27,7 +27,7 @@ const DatePicker = ({value, dates, onDateClick}) => {
       firstOfWeek={1}
       numberOfCalendars={2}
       selectionType="range"
-      minimumDate={new Date()}
+      minimumDate={moment()}
       stateDefinitions={stateDefinitions}
       dateStates={dates}
       defaultState="defaultState"
@@ -35,7 +35,6 @@ const DatePicker = ({value, dates, onDateClick}) => {
       value={value}
       onSelect={onDateClick}
       singleDateRange={true}
-      onHighlightRange={onHighlightRange}
       selectedLabel="Valgt dato"/>
   );
 };
