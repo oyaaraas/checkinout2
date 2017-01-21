@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import { addDate } from '../actions';
+
 import DatePicker from './DatePicker';
 
 const mapStateToProps = (state) => {
