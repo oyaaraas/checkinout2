@@ -80,12 +80,12 @@ const CalendarMonth = React.createClass({
     const {firstOfWeek} = this.props;
     const indices = Immutable.Range(firstOfWeek, 7).concat(Immutable.Range(0, firstOfWeek));
 
-    const headers = indices.map(function(index) {
+    const headers = indices.map(index => {
       const weekday = WEEKDAYS.get(index);
       return (
         <th className={this.cx({element: 'WeekdayHeading'})} key={weekday} scope="col"><abbr title={weekday[0]}>{weekday[1]}</abbr></th>
       );
-    }.bind(this));
+    });
 
     return (
       <tr className={this.cx({element: 'Weekdays'})}>{headers.toJS()}</tr>

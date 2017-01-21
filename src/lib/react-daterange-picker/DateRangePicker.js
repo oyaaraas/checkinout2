@@ -158,6 +158,7 @@ const DateRangePicker = React.createClass({
 
     dateStates.forEach(s => {
       const r = s.range;
+
       const start = r.start.startOf('day');
       const end = r.end.startOf('day');
 

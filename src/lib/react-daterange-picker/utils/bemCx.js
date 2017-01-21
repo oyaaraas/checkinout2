@@ -25,7 +25,7 @@ export default function bemCx(options = {}) {
       states = Object.keys(states).filter(s => states[s]);
     }
 
-    states.forEach(function(state) {
+    states.forEach(state => {
       bemClasses.push(`${ baseClassName }--is-${ state }`);
     });
   }
@@ -35,11 +35,11 @@ export default function bemCx(options = {}) {
       modifiers = Object.keys(modifiers).filter(m => modifiers[m]);
     }
 
-    modifiers.forEach(function(modifier) {
+    modifiers.forEach(modifier => {
       bemClasses.push(`${ baseClassName }--${ modifier }`);
 
       if (states) {
-        states.forEach(function(state) {
+        states.forEach(state => {
           bemClasses.push(`${ baseClassName }--${ modifier }--is-${ state }`);
         });
       }

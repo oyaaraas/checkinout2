@@ -31,10 +31,10 @@ const DatePicker = ({value, dates, onDateClick}) => {
       stateDefinitions={stateDefinitions}
       dateStates={dates}
       defaultState="defaultState"
-      showLegend={true}
+      showLegend
       value={value}
       onSelect={onDateClick}
-      singleDateRange={true}
+      singleDateRange
       selectedLabel="Valgt dato"/>
   );
 };
