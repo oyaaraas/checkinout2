@@ -1,16 +1,25 @@
 import React from 'react';
-import {Button, Grid, Row, Col} from 'react-bootstrap';
+import {FormGroup, InputGroup, FormControl, Button, Grid, Row, Col} from 'react-bootstrap';
 
 export default React.createClass({
   render() {
     return (
-        <Grid>
-          <Row className="show-grid">
-            <Col xs={12} md={8}>
-              <h1>Informasjon kommer her...</h1>
-            </Col>
-          </Row>
-        </Grid>
+      <Grid>
+        <Row className="show-grid">
+          <Col xs={6} md={6}>
+            <form>
+              <FormGroup bsSize="large">
+                <InputGroup>
+                  <FormControl type="text" placeholder="Søk etter kategori"/>
+                  <InputGroup.Button>
+                    <Button bsSize="large">Søk</Button>
+                  </InputGroup.Button>
+                </InputGroup>
+              </FormGroup>
+            </form>
+          </Col>
+        </Row>
+      </Grid>
     );
   }
 });
