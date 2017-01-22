@@ -1,43 +1,29 @@
 import React from 'react';
-import Footer from './Footer';
-import AddTodo from './AddTodo';
-import VisibleTodoList from './VisibleTodoList';
-import VisibleDatePicker from './VisibleDatePicker';
-import {Jumbotron, PageHeader, Button, Grid, Row, Col} from 'react-bootstrap';
+import {Button, Jumbotron, Grid, Row, Col} from 'react-bootstrap';
+import {LinkContainer} from 'react-router-bootstrap';
 
-
-const App = () => (
+const App = (props) => (
   <div>
     <Jumbotron>
       <Grid>
         <Row className="show-grid">
-          <Col xs={12} md={12}>
+          <Col xs={4} md={4}>
             <h1>checkinout</h1>
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={4} md={4}>
+            <LinkContainer to="/">
+              <Button bsStyle="link">Profil</Button>
+            </LinkContainer>
+            <LinkContainer to="/search">
+              <Button bsStyle="link">Søk</Button>
+            </LinkContainer>
           </Col>
         </Row>
       </Grid>
     </Jumbotron>
-    <Grid>
-      <Row className="show-grid">
-        <Col xs={12} md={12}>
-          <PageHeader>Profil</PageHeader>
-        </Col>
-      </Row>
-      <Row className="show-grid">
-        <Col xs={4} md={4}>
-          <PageHeader><small>Kategori</small></PageHeader>
-          <AddTodo />
-          <VisibleTodoList />
-          <Footer />
-        </Col>
-        <Col xs={8} md={8}>
-          <PageHeader><small>Dato</small></PageHeader>
-          <VisibleDatePicker />
-        </Col>
-      </Row>
-    </Grid>
-    <Jumbotron/>
-
+    {props.children}
   </div>
 );
 
