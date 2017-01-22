@@ -1,10 +1,15 @@
 import React from 'react';
-import {FormGroup, InputGroup, FormControl, Button, Grid, Row, Col} from 'react-bootstrap';
+import {PageHeader, FormGroup, InputGroup, FormControl, Button, Grid, Row, Col} from 'react-bootstrap';
 
 export default React.createClass({
   render() {
     return (
       <Grid>
+        <Row className="show-grid">
+          <Col xs={6} md={6}>
+            <PageHeader>Søk</PageHeader>
+          </Col>
+        </Row>
         <Row className="show-grid">
           <Col xs={6} md={6}>
             <form>
